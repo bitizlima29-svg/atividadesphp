@@ -11,7 +11,6 @@ $user   = 'root';      // ajuste para o usuário do seu MySQL
 $senha  = 'senac';           // ajuste para a senha do seu MySQL
 $port = '3307';
 
-<?php
 $dsn = "mysqli:host=$host;port=3307;dbname=$dbname;charset=utf8mb4";
 $opcoes = [
     PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
