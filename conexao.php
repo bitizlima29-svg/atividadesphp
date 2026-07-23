@@ -2,22 +2,11 @@
 $host = "localhost";
 $usuario = "root";
 $senha = "senac";
-$banco = "db_php";
+$banco = "biblioteca";
 $porta = "3307";
 
+$conexao = new mysqli($host, $usuario, $senha, $banco, $porta);
 
-$conexao = new mysqli(
-    $host,
-    $usuario,
-    $senha,
-    $banco,
-    $porta
-    
-);
-    
-    if ($conexao->connect_error) {
-        die ("Erro ao conectar ao banco de dados".$conexao->connect_error);
-    }
-    echo "Conectado com sucesso ao banco de dados!";
-
-?>
+if ($conexao->connect_error) {
+    die("Erro ao conectar ao banco de dados: " . $conexao->connect_error);
+}
